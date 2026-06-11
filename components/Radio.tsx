@@ -1,19 +1,88 @@
-import type { InputHTMLAttributes, ReactNode } from "react";
-import styles from "./Radio.module.css";
+import { useId, type InputHTMLAttributes } from "react";
 
-type RadioProps = Omit<InputHTMLAttributes<HTMLInputElement>, "type"> & {
-  children: ReactNode;
+type RadioProps = Omit<InputHTMLAttributes<HTMLInputElement>, "type" | "onChange"> & {
+  label?: string;
+  description?: string;
+  disabled?: boolean;
+  onChange?: (value: string) => void;
 };
 
-export default function Radio({ children, className, ...rest }: RadioProps) {
+const RADIO_BOX = (disabled: boolean) =>
+  [
+    "relative flex shrink-0 items-center justify-center",
+    "size-4 rounded-full bg-white shadow-w95-input transition-none",
+    disabled && "bg-[#c0c0c0]",
+  ]
+    .filter(Boolean)
+    .join(" ");
+
+export default function Radio({
+  label,
+  description,
+  disabled,
+  onChange,
+  id: idProp,
+  ...rest
+}: RadioProps) {
+  const generatedId = useId();
+  const id = idProp ?? generatedId;
+
   return (
-    <label className={[styles.radio, className].filter(Boolean).join(" ")}>
-      <input type="radio" className={styles.native} {...rest} />
-      <img aria-hidden alt="" src="/ui/radio-checked.svg" className={`${styles.icon} ${styles.iconChecked}`} />
-      <img aria-hidden alt="" src="/ui/radio-checked-disabled.svg" className={`${styles.icon} ${styles.iconCheckedDisabled}`} />
-      <img aria-hidden alt="" src="/ui/radio-unchecked.svg" className={`${styles.icon} ${styles.iconUnchecked}`} />
-      <img aria-hidden alt="" src="/ui/radio-unchecked-disabled.svg" className={`${styles.icon} ${styles.iconUncheckedDisabled}`} />
-      <span className={styles.text}>{children}</span>
+    <label
+      htmlFor={id}
+      className={[
+        "flex w-full flex-col gap-1",
+        disabled ? "cursor-not-allowed" : "cursor-pointer",
+      ].join(" ")}
+    >
+      <div className="flex items-center gap-3">
+        <input
+          type="radio"
+          id={id}
+          disabled={disabled}
+          onChange={onChange ? (e) => onChange(e.target.value) : undefined}
+          className="sr-only"
+          {...rest}
+        />
+
+        <div aria-hidden className={RADIO_BOX(disabled ?? false)}>
+          {rest.checked && (
+            <svg
+              viewBox="0 0 16 16"
+              className="size-full fill-black"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden
+            >
+              <circle cx="8" cy="8" r="3" />
+            </svg>
+          )}
+        </div>
+
+        {label && (
+          <span
+            className={[
+              "font-monocraft text-sm select-none",
+              disabled ? "text-[#7e7e7e]" : "text-black",
+            ].join(" ")}
+          >
+            {label}
+          </span>
+        )}
+      </div>
+
+      {description && (
+        <div className="flex items-start gap-3">
+          <div aria-hidden className="size-4 shrink-0" />
+          <p
+            className={[
+              "font-roboto-mono text-xs",
+              disabled ? "text-[#9b9b9b]" : "text-[#7e7e7e]",
+            ].join(" ")}
+          >
+            {description}
+          </p>
+        </div>
+      )}
     </label>
   );
 }
