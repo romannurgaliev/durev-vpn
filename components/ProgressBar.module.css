@@ -1,0 +1,65 @@
+.bar {
+  position: relative;
+  height: 20px;
+  width: 300px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.track {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 14px;
+  transform: translateY(-50%);
+  border-radius: 7px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.fill {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 14px;
+  transform: translateY(-50%);
+  border-radius: 7px;
+  border: 1px solid var(--opacity-white-20);
+  background-image: linear-gradient(90deg, var(--pad-progress-from), var(--pad-progress-to));
+}
+
+.stripes {
+  position: absolute;
+  inset: 0;
+  border-radius: 7px;
+  opacity: 0.2;
+  background-image: url("/ui/progress-stripes.png");
+  background-size: 29px 14px;
+}
+
+.cap {
+  position: absolute;
+  top: 50%;
+  width: 8px;
+  height: 10px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.capIcon {
+  width: 6px;
+  height: 6px;
+  border: 2px solid var(--pad-gray-dark);
+  border-radius: 1px;
+  box-sizing: content-box;
+}
+
+.capSoft .capIcon {
+  transform: rotate(45deg);
+}
+
+.capReached .capIcon {
+  border-color: #ffffff;
+}

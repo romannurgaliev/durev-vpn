@@ -1,0 +1,26 @@
+.snackbar {
+  display: inline-flex;
+  align-items: center;
+  min-width: 250px;
+  min-height: 50px;
+  padding: 6px 18px;
+  font-family: var(--font-ui);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: var(--text-primary);
+  box-shadow: var(--w95-shadow-default);
+}
+
+.info {
+  background-color: var(--main-azure-blue);
+  color: #ffffff;
+}
+
+.success {
+  background-color: var(--opacity-acid-20);
+}
+
+.default {
+  background-color: #ffffff;
+}

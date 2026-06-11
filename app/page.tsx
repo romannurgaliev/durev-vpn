@@ -1,65 +1,170 @@
-import Image from "next/image";
+import Accordion from "@/components/Accordion";
+import Button from "@/components/Button";
+import Checkbox from "@/components/Checkbox";
+import IconButton from "@/components/IconButton";
+import Input from "@/components/Input";
+import PadInput from "@/components/PadInput";
+import ProgressBar from "@/components/ProgressBar";
+import Radio from "@/components/Radio";
+import Snackbar from "@/components/Snackbar";
+import Spinner from "@/components/Spinner";
+import Switcher from "@/components/Switcher";
+import TokenCard from "@/components/TokenCard";
+import TokenCardInfo from "@/components/TokenCardInfo";
+import Window from "@/components/Window";
+import QrPanel from "@/components/QrPanel";
+import StatusLine from "@/components/StatusLine";
+
+const sectionTitle = "font-bold text-[13px] uppercase tracking-widest text-black/60";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="min-h-screen bg-[#c3c3c3] p-10 flex flex-col gap-10">
+      <h1 className="text-2xl font-bold text-black">Durev VPN — UI Kit (Win95)</h1>
+
+      <section className="flex flex-col gap-4">
+        <h2 className={sectionTitle}>Button</h2>
+        <div className="flex flex-wrap items-center gap-4">
+          <Button>button</Button>
+          <Button variant="secondary">button</Button>
+          <Button variant="ghost">button</Button>
+          <Button variant="wallet">button</Button>
+          <Button variant="accent">button</Button>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="flex flex-wrap items-center gap-4">
+          <Button selected>selected</Button>
+          <Button disabled>disabled</Button>
+          <Button outline>outline</Button>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section className="flex flex-col gap-4">
+        <h2 className={sectionTitle}>Icon Button</h2>
+        <div className="flex items-center gap-4">
+          <IconButton kind="plus" />
+          <IconButton kind="cross" />
+          <IconButton kind="conf" />
+          <IconButton kind="update" />
+        </div>
+      </section>
+
+      <section className="flex flex-col gap-4">
+        <h2 className={sectionTitle}>Switcher</h2>
+        <div className="flex items-center gap-4 bg-[#02007f] p-5 w-fit">
+          <Switcher aria-label="Off" />
+          <Switcher aria-label="On" defaultChecked />
+        </div>
+      </section>
+
+      <section className="flex flex-col gap-4">
+        <h2 className={sectionTitle}>Input</h2>
+        <div className="flex flex-wrap items-center gap-4">
+          <Input placeholder="ss://access-key" />
+          <Input defaultValue="ss://access-key" />
+          <Input defaultValue="ss://access-key" error />
+        </div>
+      </section>
+
+      <section className="flex flex-col gap-4">
+        <h2 className={sectionTitle}>Radio</h2>
+        <div className="flex flex-wrap items-center gap-6">
+          <Radio name="demo" defaultChecked>Radio button text</Radio>
+          <Radio name="demo">Radio button text</Radio>
+          <Radio name="demo-disabled" defaultChecked disabled>Radio button text</Radio>
+          <Radio name="demo-disabled2" disabled>Radio button text</Radio>
+        </div>
+      </section>
+
+      <section className="flex flex-col gap-4">
+        <h2 className={sectionTitle}>Checkbox</h2>
+        <div className="flex items-center gap-6">
+          <Checkbox defaultChecked />
+          <Checkbox />
+          <Checkbox defaultChecked>With label</Checkbox>
+        </div>
+      </section>
+
+      <section className="flex flex-col gap-4">
+        <h2 className={sectionTitle}>Snackbar</h2>
+        <div className="flex flex-col items-start gap-4">
+          <Snackbar variant="info">Key copied</Snackbar>
+          <Snackbar variant="success">Connected</Snackbar>
+          <Snackbar>Plain message</Snackbar>
+        </div>
+      </section>
+
+      <section className="flex flex-col gap-4">
+        <h2 className={sectionTitle}>Spinner</h2>
+        <Spinner />
+      </section>
+
+      <section className="flex flex-col gap-4">
+        <h2 className={sectionTitle}>Progress Bar (Token/Bar)</h2>
+        <div className="flex flex-col gap-4 bg-[#ededed] p-4 rounded-2xl w-[340px]">
+          <ProgressBar value={29} />
+          <ProgressBar value={100} />
+        </div>
+      </section>
+
+      <section className="flex flex-col gap-4">
+        <h2 className={sectionTitle}>Accordion</h2>
+        <div className="max-w-[877px]">
+          <Accordion title="Is VPN safety for my device?" defaultOpen>
+            Absolutely! We based on the saftest protocols ever. Developed by best developers.
+            Founded by best of the best.
+          </Accordion>
+        </div>
+      </section>
+
+      <section className="flex flex-col gap-4">
+        <h2 className={sectionTitle}>Pad / Input</h2>
+        <div className="flex flex-col gap-4">
+          <PadInput placeholder="O TON" hint="max: 200 TON" />
+          <PadInput defaultValue="220 TON" hint="max: 200 TON" error="Oh noooo, too much TONs" />
+        </div>
+      </section>
+
+      <section className="flex flex-col gap-4">
+        <h2 className={sectionTitle}>TokenCard / Info</h2>
+        <div className="bg-[#ededed] rounded-2xl w-[320px]">
+          <TokenCardInfo label="Token price" value="0.0031 TON" />
+        </div>
+      </section>
+
+      <section className="flex flex-col gap-4">
+        <h2 className={sectionTitle}>TokenCard</h2>
+        <TokenCard />
+      </section>
+
+      <section className="flex flex-col gap-4">
+        <h2 className={sectionTitle}>Window + ModalHeader</h2>
+        <Window title="login.exe" className="w-[460px]">
+          <div className="flex flex-col items-center gap-[10px] p-5 w-full">
+            <Input placeholder="ss://access-key" />
+            <Button outline className="w-full">confirm</Button>
+          </div>
+        </Window>
+      </section>
+
+      <section className="flex flex-col gap-4">
+        <h2 className={sectionTitle}>QrPanel</h2>
+        <div className="flex flex-wrap gap-4">
+          <QrPanel status="qr" qrSrc="/ui/qr-demo.png" />
+          <QrPanel status="expired" />
+          <QrPanel status="generating" />
+          <QrPanel status="success" />
+        </div>
+      </section>
+
+      <section className="flex flex-col gap-4">
+        <h2 className={sectionTitle}>StatusLine</h2>
+        <div className="flex flex-col gap-4 w-[420px]">
+          <StatusLine status="waiting" timer="2:58" />
+          <StatusLine status="expired" timer="0:00" />
+          <StatusLine status="generating" />
+          <StatusLine status="success" />
+        </div>
+      </section>
+    </main>
   );
 }
