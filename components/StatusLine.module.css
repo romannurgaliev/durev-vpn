@@ -1,0 +1,51 @@
+.line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 48px;
+  padding: 0 12px;
+  background-color: var(--surface-paper);
+  box-shadow: var(--w95-shadow-in);
+  font-family: var(--font-ui);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: var(--line-color, var(--text-primary));
+}
+
+.glyph {
+  flex-shrink: 0;
+}
+
+.text {
+  flex: 1 0 0;
+  min-width: 1px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+}
+
+.timer {
+  flex-shrink: 0;
+  color: var(--timer-color, var(--line-color, var(--text-primary)));
+}
+
+.waiting {
+  --line-color: var(--text-primary);
+  --timer-color: var(--main-azure-blue);
+}
+
+.expired {
+  --line-color: var(--text-error);
+}
+
+.generating {
+  --line-color: var(--text-disabled);
+}
+
+.success {
+  --line-color: var(--status-success);
+  --timer-color: var(--text-disabled);
+}

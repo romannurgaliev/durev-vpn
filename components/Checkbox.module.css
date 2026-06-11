@@ -1,0 +1,53 @@
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.native {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip-path: inset(50%);
+  overflow: hidden;
+}
+
+.box {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  box-shadow: var(--w95-shadow-in);
+}
+
+.native:focus-visible ~ .box {
+  box-shadow: 0 0 0 2px var(--main-black), var(--w95-shadow-in);
+}
+
+.check {
+  display: none;
+  width: 16px;
+  height: 16px;
+}
+
+.native:checked ~ .box .check {
+  display: block;
+}
+
+.text {
+  font-family: var(--font-ui);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+  color: var(--text-primary);
+}
+
+.native:disabled ~ .text {
+  color: var(--text-disabled);
+}

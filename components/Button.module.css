@@ -1,0 +1,89 @@
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 50px;
+  padding: 6px 18px;
+  font-family: var(--font-ui);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+  white-space: nowrap;
+  background-color: var(--btn-surface);
+  color: var(--btn-text);
+  box-shadow: var(--w95-shadow-default);
+  cursor: pointer;
+  user-select: none;
+}
+
+.button:hover {
+  background-image: linear-gradient(var(--btn-hover), var(--btn-hover));
+}
+
+.button:active {
+  background-image: none;
+  box-shadow: var(--w95-shadow-in);
+}
+
+.button:focus-visible {
+  outline: none;
+  box-shadow: var(--w95-shadow-focused);
+}
+
+.selected {
+  background-image: var(--w95-dither-image);
+  background-size: var(--w95-dither-size);
+  box-shadow: var(--w95-shadow-in);
+}
+
+.selected:hover {
+  background-image: var(--w95-dither-image);
+}
+
+.disabled,
+.disabled:hover,
+.disabled:active {
+  color: var(--text-disabled);
+  background-image: none;
+  box-shadow: var(--w95-shadow-default);
+  cursor: default;
+}
+
+.outline {
+  position: absolute;
+  inset: 6px;
+  border: 1px dashed var(--main-black);
+  pointer-events: none;
+}
+
+.default {
+  --btn-surface: var(--button-default-surface);
+  --btn-text: var(--button-default-text);
+  --btn-hover: var(--opacity-dark-20);
+}
+
+.secondary {
+  --btn-surface: var(--button-secondary-surface);
+  --btn-text: var(--button-secondary-text);
+  --btn-hover: var(--opacity-dark-20);
+}
+
+.ghost {
+  --btn-surface: var(--button-ghost-surface);
+  --btn-text: var(--button-ghost-text);
+  --btn-hover: var(--opacity-white-20);
+}
+
+.wallet {
+  --btn-surface: var(--button-wallet-surface);
+  --btn-text: var(--button-wallet-text);
+  --btn-hover: var(--opacity-white-20);
+}
+
+.accent {
+  --btn-surface: var(--button-accent-surface);
+  --btn-text: var(--button-accent-text);
+  --btn-hover: var(--opacity-dark-20);
+}

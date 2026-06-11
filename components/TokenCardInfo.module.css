@@ -1,0 +1,12 @@
+.row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+  font-family: var(--font-pad);
+  font-size: 13px;
+  line-height: 20px;
+  color: var(--text-primary);
+  white-space: nowrap;
+}

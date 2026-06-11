@@ -1,0 +1,102 @@
+/*
+ * Design tokens — Figma "povel-durev", page Components (node 2-502).
+ * W95 bevels are flat inset shadows: never use blur or border-radius on chrome.
+ */
+
+:root {
+  /* W95 bevel palette */
+  --w95-bevel-dark: #262626;
+  --w95-bevel-light: #f0f0f0;
+  --w95-bevel-mid: #7e7e7e;
+  --w95-bevel-mid-light: #b1b1b1;
+
+  /* Core */
+  --main-black: #000000;
+  --main-azure-blue: #0098ea;
+  --text-primary: #000000;
+  --text-disabled: #9b9b9b;
+  --text-error: #fd0100;
+
+  /* Button surfaces (Figma: Button/<Variant>/surface + text) */
+  --button-default-surface: #c3c3c3;
+  --button-default-text: #000000;
+  --button-secondary-surface: #ffffff;
+  --button-secondary-text: #000000;
+  --button-ghost-surface: #02007f;
+  --button-ghost-text: #ffffff;
+  --button-wallet-surface: #0098ea;
+  --button-wallet-text: #ffffff;
+  --button-accent-surface: #00ff00;
+  --button-accent-text: #000000;
+
+  /* Surfaces */
+  --surface-paper: #ffffff; /* sunken canvases: inputs, QR panel, status bars */
+
+  /* Status palette */
+  --status-success: #37cd2f; /* Main/Acid — base of Main/Opacity/Acid-20 */
+
+  /* Opacity overlays (Figma: Main/Opacity/*) */
+  --opacity-dark-20: rgba(0, 0, 0, 0.2);
+  --opacity-white-20: rgba(255, 255, 255, 0.2);
+  --opacity-white-40: rgba(255, 255, 255, 0.4);
+  --opacity-acid-20: rgba(55, 205, 47, 0.2);
+
+  /* Pad / Token sale palette (Figma: Pad/*) */
+  --pad-gray-light: #ededed;
+  --pad-gray-dark: #737373;
+  --pad-blue-light: #0088cb;
+  --pad-status-active: #25b857;
+  --pad-error: #ff0000;
+  --pad-pink: #ff6cb0;
+  --pad-progress-from: #14adf5;
+  --pad-progress-to: #0e75ff;
+
+  /* Window chrome */
+  --w95-window-surface: #c3c3c3; /* W95 / Gray */
+  --w95-titlebar: #02007f; /* W95 / DarkBlue */
+  --w95-titlebar-text: #ffffff;
+
+  /* Typography */
+  --font-ui: "Monocraft", "Courier New", monospace; /* App/UI/Button Pri|Sec */
+  --font-w95: "W95FA", "MS Sans Serif", "Tahoma", "Arial", sans-serif; /* body text in modals */
+  --font-pad: "Comic Sans MS", "Comic Sans", cursive; /* Pad / TokenCard */
+  --font-body-mono: "Roboto Mono", "Courier New", monospace;
+
+  /*
+   * W95 effect styles (Figma effect styles of the same name).
+   * ButtonIn doubles as W95/Input.
+   */
+  --w95-shadow-default:
+    inset -2px -2px 0 0 var(--w95-bevel-dark),
+    inset 2px 2px 0 0 var(--w95-bevel-light),
+    inset -4px -4px 0 0 var(--w95-bevel-mid);
+  --w95-shadow-out:
+    inset 4px 4px 0 0 var(--w95-bevel-mid-light),
+    inset -4px -4px 0 0 var(--w95-bevel-mid),
+    inset 2px 2px 0 0 var(--w95-bevel-light),
+    inset -2px -2px 0 0 var(--w95-bevel-dark);
+  --w95-shadow-in:
+    inset 2px 2px 0 0 var(--w95-bevel-dark),
+    inset -2px -2px 0 0 var(--w95-bevel-light),
+    inset 4px 4px 0 0 var(--w95-bevel-mid),
+    inset -4px -4px 0 0 var(--w95-bevel-mid-light);
+  --w95-shadow-focused:
+    0 0 0 2px var(--main-black),
+    inset -2px -2px 0 0 var(--w95-bevel-dark),
+    inset 2px 2px 0 0 var(--w95-bevel-light),
+    inset -4px -4px 0 0 var(--w95-bevel-mid);
+
+  /* W95/Dither Background — 2px checkerboard, no alpha */
+  --w95-dither-image: repeating-conic-gradient(#ffffff 0% 25%, transparent 0% 50%);
+  --w95-dither-size: 4px 4px;
+}
+
+.w95-bevel-default { box-shadow: var(--w95-shadow-default); }
+.w95-bevel-out { box-shadow: var(--w95-shadow-out); }
+.w95-bevel-in { box-shadow: var(--w95-shadow-in); }
+.w95-bevel-focused { box-shadow: var(--w95-shadow-focused); }
+
+.w95-dither {
+  background-image: var(--w95-dither-image);
+  background-size: var(--w95-dither-size);
+}

@@ -1,0 +1,56 @@
+.accordion {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid var(--main-black);
+  background-color: #ffffff;
+  box-shadow: var(--w95-shadow-default);
+}
+
+.open {
+  gap: 10px;
+  padding-bottom: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  cursor: pointer;
+  user-select: none;
+}
+
+.header:focus-visible {
+  outline: 1px dashed var(--main-black);
+  outline-offset: 2px;
+}
+
+.title {
+  font-family: var(--font-ui);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+  color: var(--text-primary);
+}
+
+.chevron {
+  width: 14px;
+  height: 8px;
+  flex-shrink: 0;
+}
+
+.open .chevron {
+  transform: scaleY(-1);
+}
+
+.body {
+  font-family: var(--font-body-mono);
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--text-primary);
+}

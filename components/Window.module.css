@@ -1,0 +1,7 @@
+.window {
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+  background-color: var(--w95-window-surface);
+  box-shadow: var(--w95-shadow-default);
+}

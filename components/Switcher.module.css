@@ -1,0 +1,33 @@
+.switcher {
+  display: inline-flex;
+  align-items: center;
+  width: 80px;
+  height: 40px;
+  padding: 6.667px;
+  border-radius: 20px;
+  background-color: var(--opacity-white-20);
+  cursor: pointer;
+  user-select: none;
+}
+
+.switcher:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--main-black);
+}
+
+.on {
+  background-color: var(--opacity-white-40);
+}
+
+.dot {
+  width: 26.667px;
+  height: 26.667px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  transition: transform 0.15s steps(3), background-color 0.15s steps(3);
+}
+
+.on .dot {
+  background-color: var(--button-accent-surface);
+  transform: translateX(26.666px);
+}
