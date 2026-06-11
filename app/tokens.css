@@ -1,0 +1,159 @@
+/* ============================================================
+   Design Tokens — povel-durev
+   Source: https://www.figma.com/design/Kt9WrYr6fu3fMaiujTUJrZ/povel-durev
+   Pages scanned: "Durev VPN", "Components"
+   ============================================================ */
+
+:root {
+
+  /* ── Base Colors ─────────────────────────────────────── */
+  --main-blue:            #004aad;
+  --main-black:           #000000;
+  --main-azure-blue:      #0098ea;
+  --main-dark-gray:       #9b9b9b;
+  --navy-blue:            #1a47b8;
+  --red:                  #f93939;
+  --white:                #ffffff;
+  --green:                #249f58;
+  --blue:                 #3ecbf8;
+  --mono-100:             #c3c3c3;
+  --mono-white:           #ffffff;
+
+  /* ── Opacity ─────────────────────────────────────────── */
+  --main-opacity-dark-20:  #00000033;   /* black  20% */
+  --main-opacity-white-20: #ffffff33;   /* white  20% */
+  --main-opacity-white-40: #ffffff66;   /* white  40% */
+  --main-opacity-acid-20:  #37cd2f33;   /* acid   20% */
+
+  /* ── Windows 95 Palette ──────────────────────────────── */
+  --w95-gray:             #c3c3c3;
+  --w95-dark-blue:        #02007f;
+  --w95-green:            #008584;
+
+  /* ── Text ────────────────────────────────────────────── */
+  --text-primary:         #000000;
+  --text-inverse:         #ffffff;
+  --text-disabled:        #9b9b9b;
+
+  /* ── Button Surfaces & Text ──────────────────────────── */
+  --button-default-surface:   #c3c3c3;
+  --button-default-text:      #000000;
+  --button-accent-surface:    #00ff00;
+  --button-accent-text:       #000000;
+  --button-wallet-surface:    #0098ea;
+  --button-wallet-text:       #ffffff;
+  --button-ghost-surface:     #02007f;
+  --button-ghost-text:        #ffffff;
+  --button-secondary-surface: #ffffff;
+  --button-secondary-text:    #000000;
+
+  /* ── Pad (Token/Pad Component) ───────────────────────── */
+  --pad-gray-dark:        #737373;
+  --pad-blue-light:       #0088cb;
+  --pad-gray-light:       #ededed;
+  --pad-ocean:            #3d81e7;
+  --pad-status-active:    #25b857;
+  --pad-status-soon:      #3d81e7;
+  --pad-status-ended:     #159b83;
+
+  /* ── Bot ─────────────────────────────────────────────── */
+  --bot-olive:            #223326;
+  --bot-laurel:           #75937c;
+  --label-color-dark-primary: #ffffff;
+
+  /* ── Typography: App/UI/Header ───────────────────────── */
+  --app-ui-header-font-family:    "Monocraft", monospace;
+  --app-ui-header-font-size:      20px;
+  --app-ui-header-font-weight:    500;
+  --app-ui-header-line-height:    28px;
+  --app-ui-header-letter-spacing: 0;
+
+  /* ── Typography: App/UI/Button Pri ───────────────────── */
+  --app-ui-button-pri-font-family:    "Monocraft", monospace;
+  --app-ui-button-pri-font-size:      18px;
+  --app-ui-button-pri-font-weight:    500;
+  --app-ui-button-pri-line-height:    28px;
+  --app-ui-button-pri-letter-spacing: 0;
+
+  /* ── Typography: App/UI/Button Sec ───────────────────── */
+  --app-ui-button-sec-font-family:    "Monocraft", monospace;
+  --app-ui-button-sec-font-size:      16px;
+  --app-ui-button-sec-font-weight:    500;
+  --app-ui-button-sec-line-height:    24px;
+  --app-ui-button-sec-letter-spacing: 0;
+
+  /* ── Typography: App/UI/Tab ──────────────────────────── */
+  --app-ui-tab-font-family:    "Monocraft", monospace;
+  --app-ui-tab-font-size:      12px;
+  --app-ui-tab-font-weight:    500;
+  --app-ui-tab-line-height:    16px;
+  --app-ui-tab-letter-spacing: 0;
+
+  /* ── Typography: App/Data/Large ──────────────────────── */
+  --app-data-large-font-family:    "Roboto Mono", monospace;
+  --app-data-large-font-size:      20px;
+  --app-data-large-font-weight:    400;
+  --app-data-large-line-height:    30px;
+  --app-data-large-letter-spacing: 0;
+
+  /* ── Typography: App/Text/Body ───────────────────────── */
+  --app-text-body-font-family:    "Roboto Mono", monospace;
+  --app-text-body-font-size:      14px;
+  --app-text-body-font-weight:    400;
+  --app-text-body-line-height:    22px;
+  --app-text-body-letter-spacing: 0;
+
+  /* ── Typography: App/Text/Caption ───────────────────── */
+  --app-text-caption-font-family:    "Roboto Mono", monospace;
+  --app-text-caption-font-size:      14px;
+  --app-text-caption-font-weight:    500;
+  --app-text-caption-line-height:    20px;
+  --app-text-caption-letter-spacing: 0;
+
+  /* ── Typography: App/System/Status Bar ───────────────── */
+  --app-system-status-bar-font-family:    "SF Pro", -apple-system, sans-serif;
+  --app-system-status-bar-font-size:      17px;
+  --app-system-status-bar-font-weight:    510;
+  --app-system-status-bar-line-height:    22px;
+  --app-system-status-bar-letter-spacing: 0;
+
+  /* ── Effects: Windows 95 Shadows ────────────────────── */
+
+  /* Raised button (default resting state) */
+  --w95-button-default-shadow:
+    inset -4px -4px 0 0 #7e7e7e,
+    inset  2px  2px 0 0 #f0f0f0,
+    inset -2px -2px 0 0 #262626;
+
+  /* Raised button with outer bevel (prominent raised) */
+  --w95-button-out-shadow:
+    inset  4px  4px 0 0 #b1b1b1,
+    inset -4px -4px 0 0 #7e7e7e,
+    inset  2px  2px 0 0 #f0f0f0,
+    inset -2px -2px 0 0 #262626;
+
+  /* Pressed button (depressed state) */
+  --w95-button-in-shadow:
+    inset -4px -4px 0 0 #b1b1b1,
+    inset  4px  4px 0 0 #7e7e7e,
+    inset -2px -2px 0 0 #f0f0f0,
+    inset  2px  2px 0 0 #262626;
+
+  /* Focused button (raised + focus ring) */
+  --w95-button-focused-shadow:
+    inset  4px  4px 0 0 #b1b1b1,
+    inset -4px -4px 0 0 #7e7e7e,
+    inset  2px  2px 0 0 #f0f0f0,
+    inset -2px -2px 0 0 #262626,
+    0 0 0 2px #000000;
+
+  /* Input / sunken well */
+  --w95-input-shadow:
+    inset -4px -4px 0 0 #b1b1b1,
+    inset  4px  4px 0 0 #7e7e7e,
+    inset -2px -2px 0 0 #f0f0f0,
+    inset  2px  2px 0 0 #262626;
+
+  /* ── Effects: Bot ────────────────────────────────────── */
+  --bot-blur: blur(7px);   /* use as backdrop-filter: var(--bot-blur) */
+}
