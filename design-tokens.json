@@ -92,6 +92,18 @@
               "$value": "#0098ea"
             }
           },
+          "Font": {
+            "Monocraft": {
+              "$scopes": ["ALL_SCOPES"],
+              "$type": "fontFamily",
+              "$value": "'Monocraft', monospace"
+            },
+            "Roboto-Mono": {
+              "$scopes": ["ALL_SCOPES"],
+              "$type": "fontFamily",
+              "$value": "'Roboto Mono', monospace"
+            }
+          },
           "W95": {
             "Gray": {
               "$scopes": [

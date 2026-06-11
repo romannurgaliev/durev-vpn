@@ -11,6 +11,9 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  /* next/font injects these CSS vars on <html> at runtime */
+  --font-monocraft: var(--font-monocraft);
+  --font-roboto-mono: var(--font-roboto-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,4 +27,79 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ============================================================
+   Design System — Semantic Tokens → Tailwind Theme
+   Resolved from design-tokens.json (Primitives + Semantic).
+   In Tailwind v4, @theme replaces tailwind.config theme.extend.
+   --color-*  → bg-*, text-*, border-* utilities
+   --shadow-* → shadow-* utilities
+   ============================================================ */
+@theme {
+  /* Button */
+  --color-btn-default-surface:   #c3c3c3; /* {W95.Gray} */
+  --color-btn-default-text:      #000000; /* {Main.Black} */
+  --color-btn-secondary-surface: #ffffff; /* {Main.White} */
+  --color-btn-secondary-text:    #000000; /* {Main.Black} */
+  --color-btn-ghost-surface:     #02007f; /* {W95.DarkBlue} */
+  --color-btn-ghost-text:        #ffffff; /* {Main.White} */
+  --color-btn-accent-surface:    #00ff00; /* {W95.Acid} */
+  --color-btn-accent-text:       #000000; /* {Main.Black} */
+  --color-btn-wallet-surface:    #0098ea; /* {Main.Azure-Blue} */
+  --color-btn-wallet-text:       #000000; /* {Main.Black} */
+
+  /* Text */
+  --color-text-primary:  #000000; /* {Main.Black} */
+  --color-text-secondary: #9b9b9b; /* {Main.Dark-Gray} */
+  --color-text-inverse:  #ffffff; /* {Main.White} */
+  --color-text-disabled: #9b9b9b; /* {Main.Dark-Gray} */
+  --color-text-link:     #0098ea; /* {Main.Azure-Blue} */
+
+  /* Background */
+  --color-bg-main:    #02007f; /* {W95.DarkBlue} */
+  --color-bg-window:  #c3c3c3; /* {W95.Gray} */
+  --color-bg-input:   #ffffff; /* {Main.White} */
+  --color-bg-overlay: #000000; /* {Main.Black} */
+
+  /* Border */
+  --color-border-primary:   #000000; /* {Main.Black} */
+  --color-border-highlight: #ffffff; /* {Main.White} */
+  --color-border-shadow:    #9b9b9b; /* {Main.Dark-Gray} */
+
+  /* Status */
+  --color-status-error:   #ff0000; /* {Main.Red} */
+  --color-status-success: #00ff00; /* {W95.Acid} */
+  --color-status-warning: #cdb431; /* {W95.Yellow} */
+
+  /* Win95 Bevel Shadows — all values from W95.Bevel* primitives */
+  --shadow-w95-default:
+    inset -4px -4px 0 0 #7e7e7e,
+    inset  2px  2px 0 0 #f0f0f0,
+    inset -2px -2px 0 0 #262626;
+
+  --shadow-w95-out:
+    inset  4px  4px 0 0 #b1b1b1,
+    inset -4px -4px 0 0 #7e7e7e,
+    inset  2px  2px 0 0 #f0f0f0,
+    inset -2px -2px 0 0 #262626;
+
+  --shadow-w95-in:
+    inset -4px -4px 0 0 #b1b1b1,
+    inset  4px  4px 0 0 #7e7e7e,
+    inset -2px -2px 0 0 #f0f0f0,
+    inset  2px  2px 0 0 #262626;
+
+  --shadow-w95-focused:
+    inset  4px  4px 0 0 #b1b1b1,
+    inset -4px -4px 0 0 #7e7e7e,
+    inset  2px  2px 0 0 #f0f0f0,
+    inset -2px -2px 0 0 #262626,
+    0 0 0 2px #000000;
+
+  --shadow-w95-input:
+    inset -4px -4px 0 0 #b1b1b1,
+    inset  4px  4px 0 0 #7e7e7e,
+    inset -2px -2px 0 0 #f0f0f0,
+    inset  2px  2px 0 0 #262626;
 }
