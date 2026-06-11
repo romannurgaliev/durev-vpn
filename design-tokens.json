@@ -1,0 +1,417 @@
+[
+  {
+    "Primitives": {
+      "modes": {
+        "Mode 1": {
+          "Main": {
+            "White": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "color",
+              "$value": "#ffffff"
+            },
+            "Opacity": {
+              "White-10": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "color",
+                "$value": "rgba(255, 255, 255, 0.1)"
+              },
+              "White-20": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "color",
+                "$value": "rgba(255, 255, 255, 0.2)"
+              },
+              "White-40": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "color",
+                "$value": "rgba(255, 255, 255, 0.4)"
+              },
+              "Dark-10": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "color",
+                "$value": "rgba(0, 0, 0, 0.1)"
+              },
+              "Dark-20": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "color",
+                "$value": "rgba(0, 0, 0, 0.2)"
+              },
+              "Acid-20": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "color",
+                "$value": "rgba(55, 205, 47, 0.2)"
+              }
+            },
+            "Dark-Gray": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "color",
+              "$value": "#9b9b9b"
+            },
+            "Black": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "color",
+              "$value": "#000000"
+            },
+            "Blue": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "color",
+              "$value": "#004aad"
+            },
+            "Red": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "color",
+              "$value": "#ff0000"
+            },
+            "Azure-Blue": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$description": "Wallet, Telegram",
+              "$type": "color",
+              "$value": "#0098ea"
+            }
+          },
+          "W95": {
+            "Gray": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "color",
+              "$value": "#c3c3c3"
+            },
+            "DarkBlue": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "color",
+              "$value": "#02007f"
+            },
+            "Acid": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "color",
+              "$value": "#00ff00"
+            },
+            "Green": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "color",
+              "$value": "#008584"
+            },
+            "Yellow": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "color",
+              "$value": "#cdb431"
+            },
+            "BevelLight": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "color",
+              "$value": "#f0f0f0"
+            },
+            "BevelDark": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "color",
+              "$value": "#262626"
+            },
+            "BevelMid": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "color",
+              "$value": "#7e7e7e"
+            },
+            "BevelMidLight": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "color",
+              "$value": "#b1b1b1"
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "Semantic": {
+      "modes": {
+        "Value": {
+          "Button": {
+            "Default": {
+              "surface": {
+                "$scopes": [
+                  "ALL_FILLS"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "Primitives",
+                "$value": "{W95.Gray}"
+              },
+              "text": {
+                "$scopes": [
+                  "ALL_FILLS"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "Primitives",
+                "$value": "{Main.Black}"
+              }
+            },
+            "Secondary": {
+              "surface": {
+                "$scopes": [
+                  "ALL_FILLS"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "Primitives",
+                "$value": "{Main.White}"
+              },
+              "text": {
+                "$scopes": [
+                  "ALL_FILLS"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "Primitives",
+                "$value": "{Main.Black}"
+              }
+            },
+            "Ghost": {
+              "surface": {
+                "$scopes": [
+                  "ALL_FILLS"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "Primitives",
+                "$value": "{W95.DarkBlue}"
+              },
+              "text": {
+                "$scopes": [
+                  "ALL_FILLS"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "Primitives",
+                "$value": "{Main.White}"
+              }
+            },
+            "Accent": {
+              "surface": {
+                "$scopes": [
+                  "ALL_FILLS"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "Primitives",
+                "$value": "{W95.Acid}"
+              },
+              "text": {
+                "$scopes": [
+                  "ALL_FILLS"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "Primitives",
+                "$value": "{Main.Black}"
+              }
+            },
+            "Wallet": {
+              "surface": {
+                "$scopes": [
+                  "ALL_FILLS"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "Primitives",
+                "$value": "{Main.Azure-Blue}"
+              },
+              "text": {
+                "$scopes": [
+                  "ALL_FILLS"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "Primitives",
+                "$value": "{Main.Black}"
+              }
+            }
+          },
+          "Text": {
+            "Primary": {
+              "$scopes": [
+                "ALL_FILLS"
+              ],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "Primitives",
+              "$value": "{Main.Black}"
+            },
+            "Secondary": {
+              "$scopes": [
+                "ALL_FILLS"
+              ],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "Primitives",
+              "$value": "{Main.Dark-Gray}"
+            },
+            "Inverse": {
+              "$scopes": [
+                "ALL_FILLS"
+              ],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "Primitives",
+              "$value": "{Main.White}"
+            },
+            "Disabled": {
+              "$scopes": [
+                "ALL_FILLS"
+              ],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "Primitives",
+              "$value": "{Main.Dark-Gray}"
+            },
+            "Link": {
+              "$scopes": [
+                "ALL_FILLS"
+              ],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "Primitives",
+              "$value": "{Main.Azure-Blue}"
+            }
+          },
+          "Background": {
+            "Main": {
+              "$scopes": [
+                "ALL_FILLS"
+              ],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "Primitives",
+              "$value": "{W95.DarkBlue}"
+            },
+            "Window": {
+              "$scopes": [
+                "ALL_FILLS"
+              ],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "Primitives",
+              "$value": "{W95.Gray}"
+            },
+            "Input": {
+              "$scopes": [
+                "ALL_FILLS"
+              ],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "Primitives",
+              "$value": "{Main.White}"
+            },
+            "Overlay": {
+              "$scopes": [
+                "ALL_FILLS"
+              ],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "Primitives",
+              "$value": "{Main.Black}"
+            }
+          },
+          "Border": {
+            "Primary": {
+              "$scopes": [
+                "STROKE_COLOR"
+              ],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "Primitives",
+              "$value": "{Main.Black}"
+            },
+            "Highlight": {
+              "$scopes": [
+                "STROKE_COLOR"
+              ],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "Primitives",
+              "$value": "{Main.White}"
+            },
+            "Shadow": {
+              "$scopes": [
+                "STROKE_COLOR"
+              ],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "Primitives",
+              "$value": "{Main.Dark-Gray}"
+            }
+          },
+          "Status": {
+            "Error": {
+              "$scopes": [
+                "ALL_FILLS"
+              ],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "Primitives",
+              "$value": "{Main.Red}"
+            },
+            "Success": {
+              "$scopes": [
+                "ALL_FILLS"
+              ],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "Primitives",
+              "$value": "{W95.Acid}"
+            },
+            "Warning": {
+              "$scopes": [
+                "ALL_FILLS"
+              ],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "Primitives",
+              "$value": "{W95.Yellow}"
+            }
+          }
+        }
+      }
+    }
+  }
+]
