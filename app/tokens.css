@@ -149,10 +149,10 @@
 
   /* Input / sunken well */
   --w95-input-shadow:
-    inset -4px -4px 0 0 #b1b1b1,
-    inset  4px  4px 0 0 #7e7e7e,
+    inset  2px  2px 0 0 #262626,
     inset -2px -2px 0 0 #f0f0f0,
-    inset  2px  2px 0 0 #262626;
+    inset  4px  4px 0 0 #7e7e7e,
+    inset -4px -4px 0 0 #b1b1b1;
 
   /* ── Effects: Bot ────────────────────────────────────── */
   --bot-blur: blur(7px);   /* use as backdrop-filter: var(--bot-blur) */

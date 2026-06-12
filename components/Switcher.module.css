@@ -8,6 +8,7 @@
   background-color: var(--opacity-white-20);
   cursor: pointer;
   user-select: none;
+  font-family: var(--font-ui);
 }
 
 .switcher:focus-visible {

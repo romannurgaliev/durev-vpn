@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Roboto_Mono } from "next/font/google";
+import { Roboto_Mono, Geist } from "next/font/google";
 import "./globals.css";
 import "@/components/tokens.css";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const monocraft = localFont({
   src: "../public/fonts/Monocraft.woff2",
@@ -31,9 +34,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${monocraft.variable} ${robotoMono.variable} h-full antialiased`}
+      className={cn("h-full", "antialiased", monocraft.variable, robotoMono.variable, "font-sans", geist.variable)}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="h-full overflow-hidden">{children}</body>
     </html>
   );
 }
